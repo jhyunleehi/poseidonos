@@ -286,4 +286,57 @@ Response from Poseidon OS
 [06 Aug 16:29:49.451][2504][error] failed to create array POSArray   array.cpp:203
 
 
+==> error this point 
+
+    for (string devName : nameSet.nvm)
+    {
+        DevName name(devName);
+        UblockSharedPtr uBlock = sysDevMgr_->GetDev(name);
+        if (nullptr == uBlock)
+        {
+            delete devs;
+            ret = (int)POS_EVENT_ID::ARRAY_DEVICE_NOT_FOUND;
+            return ret;
+        }
+
 ```
+* /var/log/pos/pos.log 
+```
+===>
+[06 Aug 22:35:18.534][2530][info] the device added to the Array as DATA   array_device_list.cpp:145
+[06 Aug 22:35:18.534][2507][error] SSD capacity is not valid. Valid capacity is from 20GB to 32TB   array_device_manager.cpp:548
+[06 Aug 22:35:18.534][2507][error] failed to create array POSArray   array.cpp:203
+
+==> update here
+2GB limit
+static const uint64_t MINIMUM_SSD_SIZE_BYTE = 2UL * SIZE_GB;
+```
+
+#### create pos array 
+````
+$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4
+
+
+Request to Poseidon OS
+    xrId        :  28c38719-f6bd-11eb-9691-080027f58a4e
+    command     :  CREATEARRAY
+    Param       :
+{
+    "buffer": [
+        {"deviceName": "uram0"}
+    ],
+    "data": [
+        {"deviceName": "unvme-ns-0"},
+        {"deviceName": "unvme-ns-1"},
+        {"deviceName": "unvme-ns-2"},
+        {"deviceName": "unvme-ns-3"},
+        {"deviceName": "unvme-ns-4"}
+    ]
+}
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :
+````

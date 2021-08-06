@@ -49,6 +49,7 @@ if [[ ! -z "$1" ]];then
     binary_name=$1
 fi
 
+kill -9 `ps -ef | grep poseidonos| grep script | awk '{print $2 }'`
 setup_environment
 execute_ibofos
 wait_started
