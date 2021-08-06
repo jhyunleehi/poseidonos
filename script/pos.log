@@ -367,3 +367,54 @@ All Arrays already exist up to limit: Resource temporarily unavailable
 [2021-08-06 20:07:06.612812] nvme_pcie.c:1444:nvme_pcie_qpair_abort_trackers: *ERROR*: aborting outstanding command
 [2021-08-06 20:07:06.612880] nvme_ctrlr.c: 924:nvme_ctrlr_fail: *ERROR*: ctrlr 0000:00:0e.0 in failed state.
 [06 Aug 20:07:06.613][5507][warning] spdk device detachment detected   nvme.cpp:399
+[2021-08-06 22:29:26.714975] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-06 22:29:26.716651] [ DPDK EAL parameters: [2021-08-06 22:29:26.716689] ibof_nvmf [2021-08-06 22:29:26.716702] --no-shconf [2021-08-06 22:29:26.716710] -c 001 [2021-08-06 22:29:26.716718] --log-level=lib.eal:6 [2021-08-06 22:29:26.716726] --log-level=lib.cryptodev:5 [2021-08-06 22:29:26.716735] --log-level=user1:6 [2021-08-06 22:29:26.716744] --iova-mode=pa [2021-08-06 22:29:26.716753] --base-virtaddr=0x200000000000 [2021-08-06 22:29:26.716761] --match-allocations [2021-08-06 22:29:26.716768] --file-prefix=spdk_pid4859 [2021-08-06 22:29:26.716776] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-06 22:29:26.838802] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-06 22:29:26.964720] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-06 22:29:26.965192] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 8CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+CPU ID: 4	Usage: Event
+CPU ID: 5	Usage: Event
+CPU ID: 6	Usage: General
+CPU ID: 7	Usage: QOS
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 6       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"5263515c-f6ba-11eb-a83c-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"5b3fcc7d-f6ba-11eb-aa88-080027f58a4e"}
+{"command":"LISTDEVICE","rid":"625c9ed0-f6ba-11eb-8201-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"6543fa14-f6ba-11eb-8d79-080027f58a4e"}
+[06 Aug 22:29:58.826][5510][warning] Initialization complete.   nvme.cpp:510
+[06 Aug 22:29:58.826][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[06 Aug 22:29:58.826][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[06 Aug 22:29:58.826][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[06 Aug 22:29:58.826][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+[06 Aug 22:30:00.354][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.357][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.360][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.362][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.364][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.364][2313][warning] mbr data not found   mbr_manager.cpp:328
+[06 Aug 22:30:00.366][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.371][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.375][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.377][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.380][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[06 Aug 22:30:00.380][2313][warning] mbr data not found   mbr_manager.cpp:328
+[06 Aug 22:30:00.380][2313][error] Failed to get abr list   array_manager.cpp:272
+[06 Aug 22:30:00.380][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"6a1d46f8-f6ba-11eb-be5c-080027f58a4e"}
+{"command":"CREATEARRAY","rid":"7bf5ec5b-f6ba-11eb-926b-080027f58a4e","param":{"buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==>2 [2504]
+[06 Aug 22:30:36.900][2504][error] failed to create array POSArray   array.cpp:203
