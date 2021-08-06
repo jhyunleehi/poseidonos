@@ -1,0 +1,1 @@
+smart_log_update_request.o: smart_log_update_request.cpp

@@ -1,3 +1,4 @@
 bin/poseidonos
 lib/go*
 lib/go/pkg/**
+*.o

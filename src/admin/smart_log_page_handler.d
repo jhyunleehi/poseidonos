@@ -1,0 +1,1 @@
+smart_log_page_handler.o: smart_log_page_handler.cpp

@@ -1,0 +1,1 @@
+i_array_device_manager.o: i_array_device_manager.cpp
