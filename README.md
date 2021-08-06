@@ -131,6 +131,7 @@ Setting maximum # of Huge Page Size is 128GB
 0000:4e:00.0 (144d a80a): no driver -> uio_pci_generic
 0000:80:01.3 (8086 0b00): ioatdma -> uio_pci_generic
 ....
+
 /root/doc_center/ibofos/script
 apport.service is not a native service, redirecting to systemd-sysv-install.
 Executing: /lib/systemd/systemd-sysv-install disable apport
@@ -278,6 +279,7 @@ Response from Poseidon OS
             "sn": "A000032M045041      ",
             "type": "SSD"
         },
+
         {
             "addr": "0000:4f:00.0",
             "class": "ARRAY",
@@ -289,6 +291,7 @@ Response from Poseidon OS
             "type": "SSD"
         },
         ....
+
         {
             "addr": "",
             "class": "ARRAY",
@@ -332,6 +335,7 @@ Request to Poseidon OS
         {"deviceName": "unvme-ns-1"},
         {"deviceName": "unvme-ns-2"},
         ....
+
     ],
     "spare": [
         {
@@ -400,114 +404,7 @@ Response from Poseidon OS
             "name": "unvme-ns-2",
             "type": "DATA"
         },
-        {
-            "name": "unvme-ns-3",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-4",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-5",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-6",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-7",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-8",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-9",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-10",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-11",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-12",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-13",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-14",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-15",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-16",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-17",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-18",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-19",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-20",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-21",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-22",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-23",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-24",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-25",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-26",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-27",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-28",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-29",
-            "type": "SPARE"
-        },
+   ...
         {
             "name": "unvme-ns-30",
             "type": "SPARE"
@@ -564,110 +461,7 @@ Response from Poseidon OS
             "name": "unvme-ns-1",
             "type": "DATA"
         },
-        {
-            "name": "unvme-ns-2",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-3",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-4",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-5",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-6",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-7",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-8",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-9",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-10",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-11",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-12",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-13",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-14",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-15",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-16",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-17",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-18",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-19",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-20",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-21",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-22",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-23",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-24",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-25",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-26",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-27",
-            "type": "DATA"
-        },
+      ...
         {
             "name": "unvme-ns-28",
             "type": "DATA"
@@ -754,110 +548,7 @@ Response from Poseidon OS
             "name": "unvme-ns-2",
             "type": "DATA"
         },
-        {
-            "name": "unvme-ns-3",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-4",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-5",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-6",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-7",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-8",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-9",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-10",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-11",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-12",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-13",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-14",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-15",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-16",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-17",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-18",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-19",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-20",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-21",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-22",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-23",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-24",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-25",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-26",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-27",
-            "type": "DATA"
-        },
-        {
-            "name": "unvme-ns-28",
-            "type": "DATA"
-        },
+        ...
         {
             "name": "unvme-ns-29",
             "type": "SPARE"
