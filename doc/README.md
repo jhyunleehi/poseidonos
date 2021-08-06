@@ -340,3 +340,41 @@ Response from Poseidon OS
     Problem      :  
     Solution     :
 ````
+
+#### factory reset 
+
+````
+$ sudo  ./factory_reset.py 
+
+ ================ POS FACTORY RESET ================ 
+ ====================== WARNING ======================= 
+ All information of volume and array including user data will be deleted.
+ - Array and Volume configuration information will be removed
+ - All user data will be removed
+ - All POS logs will be removed
+ - Configuration will be initialized
+
+ I fully understand the precautions and agree to the initialization.
+ The user is responsible for any data loss due to initialization.
+ Would you like to continue?(y,n)y
+kill pos
+kill process pid : 3984
+preparing reset config
+config is initialized
+preparing clear logs
+all logs are removed
+preparing reset mbr
+Try to remove udev bind rule file
+The rule file exists
+The rule file removed
+/home/good/code/poseidonos/script
+ 
+===> After ./factory_reset.py log change...
+
+{"command":"CREATEARRAY","rid":"ebe5be0d-f6ca-11eb-9e47-080027f58a4e","param":{"buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet) 
+[07 Aug 00:28:16.647][2590][error] ERROR Import()....    array_device_manager.cpp:70
+==>2 [2504]
+[07 Aug 00:28:16.647][2504][error] failed to create array POSArray   array.cpp:203
+
+````

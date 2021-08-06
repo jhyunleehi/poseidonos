@@ -1,0 +1,5 @@
+ACTION=="bind", KERNELS=="0000:00:0e.0" , SUBSYSTEMS=="pci", DRIVERS=="nvme", ATTRS{class}=="0x010802" , \
+RUN+="/bin/bash -c 'echo $kernel > /sys/bus/pci/drivers/nvme/unbind'", \
+RUN+="/bin/bash -c 'echo $kernel > /sys/bus/pci/drivers/uio_pci_generic/bind'"
+
+
