@@ -213,7 +213,7 @@ int
 AbrManager::GetAbrList(std::vector<ArrayBootRecord>& abrList)
 {
     int result = mbrManager->LoadMbr();
-     //if (result != 0)
+    //if (result != 0)
     //{
     //    return result;
     //}

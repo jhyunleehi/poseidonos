@@ -256,7 +256,7 @@ DeviceManager::_CheckDuplication(UblockSharedPtr dev)
         "DEVICE DUPLICATED Name:{}, SN: {}",
         name.val, sn.val);
 
-    return false;
+    return true;
 }
 
 void
