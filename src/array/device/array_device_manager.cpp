@@ -66,6 +66,9 @@ ArrayDeviceManager::Import(DeviceSet<string> nameSet)
 
     for (string devName : nameSet.nvm)
     {
+        printf("==> ArrayDeviceManager::Import(DeviceSet<string> nameSet) \n");
+        POS_TRACE_ERROR((int)POS_EVENT_ID::ARRAY_DEBUG_MSG, "ERROR Import().... ", devName);
+
         DevName name(devName);
         UblockSharedPtr uBlock = sysDevMgr_->GetDev(name);
         if (nullptr == uBlock)
