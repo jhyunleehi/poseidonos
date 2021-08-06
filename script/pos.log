@@ -628,3 +628,28 @@ name: uram0
 [06 Aug 22:49:45.861][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
 {"command":"LISTDEVICE","rid":"3c93513c-f6bd-11eb-a00f-080027f58a4e"}
 {"command":"LISTDEVICE","rid":"51986267-f6bd-11eb-b034-080027f58a4e"}
+[2021-08-06 23:33:25.399643] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-06 23:33:25.399912] [ DPDK EAL parameters: [2021-08-06 23:33:25.399922] ibof_nvmf [2021-08-06 23:33:25.399928] --no-shconf [2021-08-06 23:33:25.399934] -c 001 [2021-08-06 23:33:25.399939] --log-level=lib.eal:6 [2021-08-06 23:33:25.399944] --log-level=lib.cryptodev:5 [2021-08-06 23:33:25.399949] --log-level=user1:6 [2021-08-06 23:33:25.399954] --iova-mode=pa [2021-08-06 23:33:25.399959] --base-virtaddr=0x200000000000 [2021-08-06 23:33:25.399964] --match-allocations [2021-08-06 23:33:25.399969] --file-prefix=spdk_pid16825 [2021-08-06 23:33:25.399974] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-06 23:33:25.515349] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-06 23:33:25.615799] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-06 23:33:25.616060] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 8CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+CPU ID: 4	Usage: Event
+CPU ID: 5	Usage: Event
+CPU ID: 6	Usage: General
+CPU ID: 7	Usage: QOS
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 6       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"4265dcb0-f6c3-11eb-84cb-080027f58a4e"}
