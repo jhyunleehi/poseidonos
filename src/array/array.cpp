@@ -146,18 +146,21 @@ Array::Create(DeviceSet<string> nameSet, string dataRaidType)
     ret = state->IsCreatable();
     if (ret != 0)
     {
+        printf("==>1 [%d]\n", ret);
         goto error;
     }
 
     ret = devMgr_->Import(nameSet);
     if (ret != 0)
     {
+        printf("==>2 [%d]\n", ret);
         goto error;
     }
 
     ret = namePolicy.CheckArrayName(name_);
     if (ret != (int)POS_EVENT_ID::SUCCESS)
     {
+        printf("==>3 [%d]\n", ret);
         goto error;
     }
 
@@ -167,6 +170,7 @@ Array::Create(DeviceSet<string> nameSet, string dataRaidType)
     if (dataRaidType != "RAID5")
     {
         ret = (int)POS_EVENT_ID::ARRAY_WRONG_FT_METHOD;
+        printf("==>4 [%d]\n",  ret );
         goto error;
     }
 
@@ -176,12 +180,14 @@ Array::Create(DeviceSet<string> nameSet, string dataRaidType)
     ret = abrControl->CreateAbr(name_, meta_);
     if (ret != 0)
     {
+        printf("==>5 [%d]\n", ret);
         goto error;
     }
 
     ret = _Flush();
     if (ret != 0)
     {
+        printf("==>6 [%d]\n", ret);
         goto error;
     }
     _FormatMetaPartition();

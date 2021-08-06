@@ -1,4 +1,4 @@
-prefix=/home/good/ncode/poseidonos/lib/spdlog-1.4.2
+prefix=/home/good/code/poseidonos/lib/spdlog-1.4.2
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib

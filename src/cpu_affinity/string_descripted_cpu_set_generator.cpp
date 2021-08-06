@@ -177,6 +177,7 @@ StringDescriptedCpuSetGenerator::_SetCpuRange(
     uint32_t cpuCount = CPU_COUNT(&cpuSetAnd);
     bool isExceed = (to >= TOTAL_CORE_COUNT);
     bool isOverlaped = (cpuCount > 0);
+    //if (isExceed || isOverlaped)
     if (isOverlaped)
     {
         printf("==>>[%d][%d]\n", isExceed, isOverlaped);
