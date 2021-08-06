@@ -48,7 +48,8 @@ Deduplicator::_CheckDuplication(int id, string msg, chrono::system_clock::time_p
             return true;
         }
     }
-    return false;
+    //return false;
+    return true;
 }
 
 bool
