@@ -574,3 +574,33 @@ FATA[0015] EOF
 [09 Aug 17:53:23.892][4339][warning] All volume already closed. Ignore duplicate volume close   meta_volume_container.cpp:122
 
 ````
+
+
+
+#### syslog 
+````
+Aug 10 08:53:02 good-VirtualBox systemd-udevd[6423]: inotify_add_watch(9, /dev/nvme0n3, 10) failed: No such file or directory
+Aug 10 08:53:02 good-VirtualBox systemd-udevd[6320]: inotify_add_watch(9, /dev/nvme0n1, 10) failed: No such file or directory
+Aug 10 08:53:02 good-VirtualBox systemd-udevd[6424]: inotify_add_watch(9, /dev/nvme0n4, 10) failed: No such file or directory
+Aug 10 08:53:02 good-VirtualBox systemd-udevd[6425]: inotify_add_watch(9, /dev/nvme0n5, 10) failed: No such file or directory
+Aug 10 08:53:02 good-VirtualBox systemd-udevd[6321]: inotify_add_watch(9, /dev/nvme0n2, 10) failed: No such file or directory
+Aug 10 08:53:02 good-VirtualBox poseidonos: Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+Aug 10 08:53:02 good-VirtualBox poseidonos: [ DPDK EAL parameters:
+Aug 10 08:53:02 good-VirtualBox poseidonos: ibof_nvmf
+Aug 10 08:53:02 good-VirtualBox poseidonos: --no-shconf
+Aug 10 08:53:02 good-VirtualBox poseidonos: -c 001
+Aug 10 08:53:02 good-VirtualBox poseidonos: --log-level=lib.eal:6
+Aug 10 08:53:02 good-VirtualBox poseidonos: --log-level=lib.cryptodev:5
+Aug 10 08:53:02 good-VirtualBox poseidonos: --log-level=user1:6
+Aug 10 08:53:02 good-VirtualBox poseidonos: --iova-mode=pa
+Aug 10 08:53:02 good-VirtualBox poseidonos: --base-virtaddr=0x200000000000
+Aug 10 08:53:02 good-VirtualBox poseidonos: --match-allocations
+Aug 10 08:53:02 good-VirtualBox poseidonos: --file-prefix=spdk_pid6545
+Aug 10 08:53:02 good-VirtualBox poseidonos: ]
+````
+
+##### segment fault
+```
+Aug 10 08:55:51 good-VirtualBox kernel: [39065.494384] poseidonos[6678]: segfault at 0 ip 0000000000812375 sp 00007f18813843a0 error 4 in poseidonos[400000+81b000]
+Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 54 55 53 48 83 ec 40 48 8b 6f 28 48 8b 56 08 64 48 8b 04 25 28 00 00 00 48 89 44 24 38 31 c0 48 8d 5c 24 10 <48> 8b 45 00 48 89 df 4c 8b 60 20 48 8d 43 10 48 89 44 24 10 48 8b
+````
