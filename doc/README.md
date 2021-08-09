@@ -314,7 +314,8 @@ static const uint64_t MINIMUM_SSD_SIZE_BYTE = 2UL * SIZE_GB;
 
 #### create pos array 
 ````
-$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4
+$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
+ 
 
 
 Request to Poseidon OS
@@ -376,5 +377,200 @@ The rule file removed
 [07 Aug 00:28:16.647][2590][error] ERROR Import()....    array_device_manager.cpp:70
 ==>2 [2504]
 [07 Aug 00:28:16.647][2504][error] failed to create array POSArray   array.cpp:203
+
+````
+
+#### Create Array
+
+```
+$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
+
+
+Request to Poseidon OS
+    xrId        :  f1a78103-f8e2-11eb-bfe5-080027f58a4e
+    command     :  CREATEARRAY
+    Param       :
+{
+    "name": "POSArray",
+    "raidtype": "RAID5",
+    "buffer": [{"deviceName": "uram0"}],
+    "data": [
+        {"deviceName": "unvme-ns-0"},
+        {"deviceName": "unvme-ns-1"},
+        {"deviceName": "unvme-ns-2"},
+        {"deviceName": "unvme-ns-3"},
+        {"deviceName": "unvme-ns-4"}
+    ]
+}
+
+
+Response from Poseidon OS
+    Code        :  2525   ==>>  2525 : ARRAY_ALREADY_EXIST | DEBUG | - |
+    Description :  failed to create POSArray(code:2525)
+```
+
+#### get POS array 
+
+```
+$ sudo ./cli array info --name POSArray
+
+
+Request to Poseidon OS
+    xrId        :  6ab9bbe1-f8e3-11eb-ab78-080027f58a4e
+    command     :  ARRAYINFO
+    Param       :
+{"name": "POSArray"}
+
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :  
+    Data         : 
+ {
+    "capacity": "0GB (0B)",
+    "createDatetime": "2021-08-06 22:49:45 +0900",
+    "devicelist": [
+        {"name": "uram0","type": "BUFFER"},
+        {"name": "unvme-ns-0","type": "DATA"}
+    ],
+    "name": "POSArray",
+    "rebuildingProgress": "0",
+    "situation": "DEFAULT",
+    "state": "OFFLINE",
+    "updateDatetime": "2021-08-06 22:49:45 +0900",
+    "used": "0GB (0B)"
+}
+```
+
+#### delete pos array 
+````
+$ sudo ./cli array delete   --name POSArray
+
+Request to Poseidon OS
+    xrId        :  193878fd-f8e7-11eb-bf33-080027f58a4e
+    command     :  DELETEARRAY
+    Param       :
+{"name": "POSArray"}
+
+
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :
+````
+
+
+#### create pos array
+
+```$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray1 --raidtype RAID5
+
+
+Request to Poseidon OS
+    xrId        :  3563470d-f8e7-11eb-8aa0-080027f58a4e
+    command     :  CREATEARRAY
+    Param       :
+{
+    "name": "POSArray1",
+    "raidtype": "RAID5",
+    "buffer": [
+        {"deviceName": "uram0"}
+    ],
+    "data": [
+        {"deviceName": "unvme-ns-0"},
+        {"deviceName": "unvme-ns-1"},
+        {"deviceName": "unvme-ns-2"},
+        {"deviceName": "unvme-ns-3"},
+        {"deviceName": "unvme-ns-4"}
+    ]
+}
+
+
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :  
+
+
+$ sudo ./cli array info --name POSArray1
+
+
+Request to Poseidon OS
+    xrId        :  445e4593-f8e7-11eb-985c-080027f58a4e
+    command     :  ARRAYINFO
+    Param       : {"name": "POSArray1"}
+
+
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :  
+    Data         : 
+ {
+    "capacity": "0GB (0B)",
+    "createDatetime": "2021-08-09 16:55:48 +0900",
+    "devicelist": [
+        {"name": "uram0","type": "BUFFER"},
+        {"name": "unvme-ns-0","type": "DATA"},
+        {"name": "unvme-ns-1","type": "DATA"},
+        {"name": "unvme-ns-2","type": "DATA"},
+        {"name": "unvme-ns-3","type": "DATA"},
+        {"name": "unvme-ns-4","type": "DATA"}
+    ],
+    "name": "POSArray1",
+    "rebuildingProgress": "0",
+    "situation": "DEFAULT",
+    "state": "OFFLINE",
+    "updateDatetime": "2021-08-09 16:55:48 +0900",
+    "used": "0GB (0B)"
+}
+
+```
+
+#### resize uram 
+````
+good@good-VirtualBox:~/code/poseidonos/lib/spdk-20.10/scripts$ sudo ./rpc.py bdev_malloc_create -b uram0 1024  512uram0
+
+namespace pos { class MetaRegionContent {
+
+===>>>[1]
+==pointer=>>>[0x20002e400e00]
+===>>>[1]
+==pointer=>>>[0x200003813e00]
+===>>>[2]
+==pointer=>>>[0x200003811c00]
+===>>>[2048]
+==pointer=>>>[0x200088a00000]
+===>>>[1]
+==pointer=>>>[0x200003810a00]
+===>>>[2]
+==pointer=>>>[0x20000380e800]
+===>>>[2048]
+==pointer=>>>[0x200089400000]
+[09 Aug 17:49:34.805][4353][error] Filesystem MBR has been corrupted or Filesystem cannot be found.   metafs_system_manager.cpp:145
+
+
+````
+
+#### mount array
+
+````
+$ sudo ./cli array mount  --name POSArray
+FATA[0015] EOF                              
+
+==pointer=>>>[0x200089400000]
+[09 Aug 17:53:23.892][4340][error] Volume catalog is invalid. Try to recover broken volume catalog catalogs..   /home/good/code/poseidonos/src/metafs/mvm/volume/volume_catalog_manager.cpp:125
+[09 Aug 17:53:23.892][4000][error] Load volume meta failed...   /home/good/code/poseidonos/src/metafs/mvm/volume/meta_volume.cpp:221
+[09 Aug 17:53:23.892][4334][error] Meta volume open failed.   meta_volume_container.cpp:83
+[09 Aug 17:53:23.892][4334][error] Meta volume open is failed. Volume is corrupted or isn't created yet   meta_volume_context.cpp:84
+[09 Aug 17:53:23.892][4334][warning] Ran into an error while executing array mount sequence for POSArray1   array_mount_sequence.cpp:152
+[09 Aug 17:53:23.892][4339][warning] All volume already closed. Ignore duplicate volume close   meta_volume_container.cpp:122
 
 ````

@@ -66,7 +66,7 @@ ArrayDeviceManager::Import(DeviceSet<string> nameSet)
 
     for (string devName : nameSet.nvm)
     {
-        printf("==> ArrayDeviceManager::Import(DeviceSet<string> nameSet) \n");
+        printf("==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [%s]\n", devName.c_str());
         POS_TRACE_ERROR((int)POS_EVENT_ID::ARRAY_DEBUG_MSG, "ERROR Import().... ", devName);
 
         DevName name(devName);
