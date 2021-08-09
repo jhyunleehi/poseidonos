@@ -536,7 +536,7 @@ Response from Poseidon OS
 
 #### resize uram 
 ````
-good@good-VirtualBox:~/code/poseidonos/lib/spdk-20.10/scripts$ sudo ./rpc.py bdev_malloc_create -b uram0 1024  512uram0
+good@good-VirtualBox:~/code/poseidonos/lib/spdk-20.10/scripts$ sudo ./rpc.py bdev_malloc_create -b uram0 4096  512uram0
 
 namespace pos { class MetaRegionContent {
 
