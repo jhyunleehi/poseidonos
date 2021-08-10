@@ -15,7 +15,7 @@ execute_ibofos()
     if [ -f ${ROOT_DIR}/bin/$binary_name ];
     then
         echo "Execute poseidonos"
-        nohup ${ROOT_DIR}/bin/$binary_name &>> ${ROOT_DIR}/script/${logfile} &
+        nohup ${ROOT_DIR}/bin/$binary_name  &>> ${ROOT_DIR}/script/${logfile} &
     else
         echo "No executable poseidonos file"
         exit -1

@@ -3,18 +3,32 @@
 ## build  in virtual box
 * cpu
 ```
-# lscpu
+$ lscpu
 Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit
 Byte Order:          Little Endian
-CPU(s):              8
-On-line CPU(s) list: 0-7
+CPU(s):              12
+On-line CPU(s) list: 0-11
 Thread(s) per core:  1
-Core(s) per socket:  8
+Core(s) per socket:  12
 Socket(s):           1
 NUMA node(s):        1
+Vendor ID:           AuthenticAMD
+CPU family:          23
+Model:               8
+Model name:          AMD Ryzen 7 2700 Eight-Core Processor
+Stepping:            2
+CPU MHz:             3193.994
+BogoMIPS:            6387.98
+Hypervisor vendor:   KVM
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           64K
+L2 cache:            512K
+L3 cache:            16384K
+NUMA node0 CPU(s):   0-11
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase avx2 rdseed clflushopt arat
 ...
-```
 
 * mem
 ```
@@ -575,8 +589,6 @@ FATA[0015] EOF
 
 ````
 
-
-
 #### syslog 
 ````
 Aug 10 08:53:02 good-VirtualBox systemd-udevd[6423]: inotify_add_watch(9, /dev/nvme0n3, 10) failed: No such file or directory
@@ -603,4 +615,73 @@ Aug 10 08:53:02 good-VirtualBox poseidonos: ]
 ```
 Aug 10 08:55:51 good-VirtualBox kernel: [39065.494384] poseidonos[6678]: segfault at 0 ip 0000000000812375 sp 00007f18813843a0 error 4 in poseidonos[400000+81b000]
 Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 54 55 53 48 83 ec 40 48 8b 6f 28 48 8b 56 08 64 48 8b 04 25 28 00 00 00 48 89 44 24 38 31 c0 48 8d 5c 24 10 <48> 8b 45 00 48 89 df 4c 8b 60 20 48 8d 43 10 48 89 44 24 10 48 8b
-````
+```
+
+#### Create volume
+```
+$ sudo  ./cli volume create --name vol1 --size 1024000000 --maxiops 0 --maxbw 0 --array POSArray 
+
+
+Request to Poseidon OS
+    xrId        :  98787710-f9c6-11eb-9502-080027f58a4e
+    command     :  CREATEVOLUME
+    Param       :
+{
+    "name": "vol1",
+    "array": "POSArray",
+    "size": 1024000000
+}
+
+
+Response from Poseidon OS
+    Code         :  2032
+    Level        :  WARN
+    Description  :  Requested size not aligned
+    Problem      :  The requested volume size does not align with block size
+    Solution     :  Input volume size to be multiple of block size
+```
+
+### mount volume
+```
+$ sudo  ./cli volume mount --name vol1 --array POSArray
+
+
+Request to Poseidon OS
+    xrId        :  acc2e893-f9c6-11eb-9757-080027f58a4e
+    command     :  MOUNTVOLUME
+    Param       :
+{
+    "name": "vol1",
+    "array": "POSArray"
+}
+
+
+Response from Poseidon OS
+    Code         :  2010
+    Level        :  WARN
+    Description  :  The requested volume does not exist
+    Problem      :  The volume with the requested volume name or volume ID does not exist
+    Solution     :  Enter the correct volume name or volume ID after checking the volume list
+
+
+good@good-VirtualBox:~/code/poseidonos/bin$ sudo  ./cli volume list --array POSArray
+
+
+Request to Poseidon OS
+    xrId        :  b7a825b6-f9c6-11eb-9639-080027f58a4e
+    command     :  LISTVOLUME
+    Param       :
+{
+    "array": "POSArray"
+}
+
+
+Response from Poseidon OS
+    Code         :  0
+    Level        :  INFO
+    Description  :  Success
+    Problem      :  
+    Solution     :  
+```
+
+
