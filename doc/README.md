@@ -329,8 +329,6 @@ static const uint64_t MINIMUM_SSD_SIZE_BYTE = 2UL * SIZE_GB;
 #### create pos array 
 ````
 $ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
- 
-
 
 Request to Poseidon OS
     xrId        :  28c38719-f6bd-11eb-9691-080027f58a4e
@@ -683,5 +681,3 @@ Response from Poseidon OS
     Problem      :  
     Solution     :  
 ```
-
-
