@@ -2479,3 +2479,143 @@ name: uram0
 ==pointer=>>>[0x20012eb39800]
 ===>>>[2048]
 ==pointer=>>>[0x200196000000]
+[2021-08-10 11:47:29.670921] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-10 11:47:29.671593] [ DPDK EAL parameters: [2021-08-10 11:47:29.671612] ibof_nvmf [2021-08-10 11:47:29.671620] --no-shconf [2021-08-10 11:47:29.671626] -c 001 [2021-08-10 11:47:29.671632] --log-level=lib.eal:6 [2021-08-10 11:47:29.671642] --log-level=lib.cryptodev:5 [2021-08-10 11:47:29.671648] --log-level=user1:6 [2021-08-10 11:47:29.671654] --iova-mode=pa [2021-08-10 11:47:29.671665] --base-virtaddr=0x200000000000 [2021-08-10 11:47:29.671671] --match-allocations [2021-08-10 11:47:29.671677] --file-prefix=spdk_pid3679 [2021-08-10 11:47:29.671688] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-10 11:47:29.808729] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-10 11:47:29.913540] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-10 11:47:29.913876] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 8CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+CPU ID: 4	Usage: Event
+CPU ID: 5	Usage: Event
+CPU ID: 6	Usage: General
+CPU ID: 7	Usage: QOS
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 6       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"4e283ecd-f985-11eb-8604-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"4fad010a-f985-11eb-97ca-080027f58a4e"}
+[10 Aug 11:47:32.767][5510][warning] Initialization complete.   nvme.cpp:510
+[10 Aug 11:47:32.768][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 11:47:32.768][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 11:47:32.768][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 11:47:32.768][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[10 Aug 11:47:34.101][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 11:47:34.101][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 11:47:34.101][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 11:47:34.101][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+{"command":"LISTDEVICE","rid":"507a9e5d-f985-11eb-9960-080027f58a4e"}
+{"command":"CREATEARRAY","rid":"5081f8e9-f985-11eb-8a1f-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+{"command":"SCANDEVICE","rid":"4aad7bd5-f98c-11eb-851e-080027f58a4e"}
+name: uram0
+[10 Aug 12:37:30.855][5517][warning] DEVICE DUPLICATED Name:uram0, SN: uram0   device_manager.cpp:257
+[10 Aug 12:37:30.918][2525][error] Array POSArray load failed   array_manager.cpp:264
+[10 Aug 12:37:30.918][2525][error] array loading failed : POSArray    scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"5010d4ea-f98c-11eb-a4e7-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"7c24e9a2-f98c-11eb-b410-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"CREATEARRAY","rid":"80b9284b-f98c-11eb-8a8f-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[10 Aug 12:39:01.529][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[10 Aug 12:39:01.554][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[10 Aug 12:39:01.554][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[10 Aug 12:39:01.554][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[10 Aug 12:39:01.554][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[10 Aug 12:39:01.555][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"902cc9e0-f98c-11eb-949d-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"9741f08d-f98c-11eb-b1d5-080027f58a4e","param":{"name":"POSArray"}}
+[10 Aug 12:39:39.335][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:39:39.335][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:39:39.335][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:39:39.335][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20002e400e00]
+===>>>[1]
+==pointer=>>>[0x20022eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20022eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2002fbe00000]
+===>>>[1]
+==pointer=>>>[0x20022eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20022eb39800]
+===>>>[2048]
+==pointer=>>>[0x2002fc800000]
+[2021-08-10 12:40:36.783015] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-10 12:40:36.783508] [ DPDK EAL parameters: [2021-08-10 12:40:36.783523] ibof_nvmf [2021-08-10 12:40:36.783530] --no-shconf [2021-08-10 12:40:36.783536] -c 001 [2021-08-10 12:40:36.783542] --log-level=lib.eal:6 [2021-08-10 12:40:36.783548] --log-level=lib.cryptodev:5 [2021-08-10 12:40:36.783553] --log-level=user1:6 [2021-08-10 12:40:36.783559] --iova-mode=pa [2021-08-10 12:40:36.783565] --base-virtaddr=0x200000000000 [2021-08-10 12:40:36.783571] --match-allocations [2021-08-10 12:40:36.783589] --file-prefix=spdk_pid4533 [2021-08-10 12:40:36.783598] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-10 12:40:36.905598] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-10 12:40:37.006106] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-10 12:40:37.006388] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 8CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+CPU ID: 4	Usage: Event
+CPU ID: 5	Usage: Event
+CPU ID: 6	Usage: General
+CPU ID: 7	Usage: QOS
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 6       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"b9c368dd-f98c-11eb-a516-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"bb434772-f98c-11eb-b21d-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"bb44df63-f98c-11eb-a1e5-080027f58a4e"}
+[10 Aug 12:40:39.755][5510][warning] Initialization complete.   nvme.cpp:510
+[10 Aug 12:40:39.755][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 12:40:39.755][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 12:40:39.755][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[10 Aug 12:40:39.755][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[10 Aug 12:40:41.053][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.053][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.053][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.053][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+{"command":"LISTDEVICE","rid":"bc0d00d1-f98c-11eb-b867-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"bc0eb3b1-f98c-11eb-96c5-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"CREATEARRAY","rid":"bc135cac-f98c-11eb-8acc-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[10 Aug 12:40:41.126][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[10 Aug 12:40:41.140][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[10 Aug 12:40:41.140][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[10 Aug 12:40:41.149][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[10 Aug 12:40:41.152][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[10 Aug 12:40:41.152][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"bc1d4796-f98c-11eb-bf76-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"bc200951-f98c-11eb-9fa8-080027f58a4e","param":{"name":"POSArray"}}
+[10 Aug 12:40:41.189][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.189][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.189][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[10 Aug 12:40:41.189][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20002e400e00]
+===>>>[1]
+==pointer=>>>[0x20022eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20022eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2002fbe00000]
+===>>>[1]
+==pointer=>>>[0x20022eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20022eb39800]
+===>>>[2048]
+==pointer=>>>[0x2002fc800000]
