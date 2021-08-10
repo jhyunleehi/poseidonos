@@ -15,7 +15,7 @@ execute_ibofos()
     if [ -f ${ROOT_DIR}/bin/$binary_name ];
     then
         echo "Execute poseidonos"
-        nohup ${ROOT_DIR}/bin/$binary_name &>> ${ROOT_DIR}/script/${logfile} &
+        nohup ${ROOT_DIR}/bin/$binary_name  &>> ${ROOT_DIR}/script/${logfile} &
     else
         echo "No executable poseidonos file"
         exit -1
@@ -49,7 +49,7 @@ if [[ ! -z "$1" ]];then
     binary_name=$1
 fi
 
-kill -9 `ps -ef | grep poseidonos| grep script | awk '{print $2 }'`
+kill -9 `ps -ef | grep poseidonos| grep script| grep  -v sh | awk '{print $2 }'`
 setup_environment
 execute_ibofos
 wait_started

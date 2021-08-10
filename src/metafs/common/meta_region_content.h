@@ -35,7 +35,7 @@
 #include "src/include/memory.h"
 #include "src/metafs/common/metafs_type.h"
 #include "src/metafs/config/metafs_config.h"
-
+#include <stdio.h>
 namespace pos
 {
 class MetaRegionContent
@@ -44,9 +44,12 @@ public:
     void*
     operator new(size_t size, MetaLpnType lpnCnt)
     {
+        //if (lpnCnt >=2048 ) lpnCnt =512;
+        printf("===>>>[%ld]\n", lpnCnt);
         MetaLpnType memUnitSize = MetaFsIoConfig::META_PAGE_SIZE_IN_BYTES;
         size_t contentSize = lpnCnt * memUnitSize;
         void* buf = pos::Memory<pos::SECTOR_SIZE>::Alloc(pos::ChangeByteToSector(contentSize));
+        printf("==pointer=>>>[%p]\n", buf);
         assert(buf != nullptr); // please check hugepage preallocation
         return buf;
     }

@@ -136,7 +136,7 @@ ArrayDeviceList::AddData(ArrayDevice* dev)
             POS_TRACE_WARN(eventId,
                 "failed to add the device {} to the Array, Duplicated",
                 dev->GetUblock()->GetName());
-            return eventId; // already exists
+            // return eventId; // already exists
         }
         dev->GetUblock()->SetClass(DeviceClass::ARRAY);
     }
