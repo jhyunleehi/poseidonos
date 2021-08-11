@@ -616,6 +616,58 @@ Aug 10 08:55:51 good-VirtualBox kernel: [39065.494384] poseidonos[6678]: segfaul
 Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 54 55 53 48 83 ec 40 48 8b 6f 28 48 8b 56 08 64 48 8b 04 25 28 00 00 00 48 89 44 24 38 31 c0 48 8d 5c 24 10 <48> 8b 45 00 48 89 df 4c 8b 60 20 48 8d 43 10 48 89 44 24 10 48 8b
 ```
 
+#### build with 4core
+* change this file /etc/pos/default_pos.conf
+```
+{
+   "journal": {
+        "enable": true,
+        "buffer_size_in_mb": 0,
+        "debug_mode": false
+   },
+   "flush": {
+        "enable": false
+   },
+   "logger": {
+        "logfile_size_in_mb": 50,
+        "logfile_rotation_count" : 20,
+        "min_allowable_log_level" : "debug",
+        "deduplication_enabled" : true,
+        "deduplication_sensitivity_in_msec" : 20
+   },
+   "debug": {
+        "memory_checker" : false
+   },
+   "ioat": {
+        "enable": true
+   },
+   "affinity_manager": {
+       "use_config": true,
+       "reactor": "0",
+       "udd_io_worker": "1",
+       "event_scheduler": "2",
+       "event_worker": "3",
+       "general_usage": "0",
+       "qos": "1",
+       "meta_scheduler": "2",
+       "meta_io": "3"
+   },
+   "user_nvme_driver": {
+       "use_config" : true,
+       "ssd_timeout_us" : 8000000,
+       "retry_count_backend_io" : 5,
+       "retry_count_frontend_io" : 3
+   },
+   "perf_impact": {
+       "rebuild" : "low"
+   },
+   "fe_qos": {
+       "enable": false
+   }
+}
+```
+
+
 #### Create volume
 ```
 $ sudo  ./cli volume create --name vol1 --size 1024000000 --maxiops 0 --maxbw 0 --array POSArray 
