@@ -219,7 +219,7 @@ Response from Poseidon OS
  {  "version": "pos-0.9.2" }
 ```
 
-#### 
+#### device scan list
 ```
 good@good-VirtualBox:~/code/poseidonos/bin$ ./cli device scan
 good@good-VirtualBox:~/code/poseidonos/bin$ ./cli device list
@@ -666,6 +666,19 @@ Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 5
    }
 }
 ```
+* default pos.conf file
+`/home/good/code/poseidonos/src/master_context/default_configuration.h `
+```` 
+    const string CONFIGURATION_PATH = "/etc/pos/";
+    const string CONFIGURATION_NAME = "pos.conf";
+    const string DEFAULT_CONFIGURATION_NAME = "default_pos.conf";
+};
+
+} // namespace po
+````
+
+
+
 #### run.sh
 ````
 sudo  /home/good/code/poseidonos/script/factory_reset.py
