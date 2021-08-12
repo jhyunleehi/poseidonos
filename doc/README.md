@@ -1,8 +1,10 @@
-# Posidon OS
+# Poseidon OS
 
-## build  in virtual box
+## build  on virtual box :  4core/16GB/nvme 5 disk
+
 * cpu
-```
+
+```sh
 $ lscpu
 Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit
@@ -32,7 +34,8 @@ Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cm
 ```
 
 * mem
-```
+
+```sh
 # lsmem
 RANGE                                  SIZE  STATE REMOVABLE  BLOCK
 0x0000000000000000-0x00000000dfffffff  3.5G online       yes   0-27
@@ -42,8 +45,10 @@ Memory block size:       128M
 Total online memory:      16G
 Total offline memory:      0B
 ```
+
 * nvme disk
-```
+
+```sh
 root@good-VirtualBox:~# nvme list
 Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
 ---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
@@ -61,21 +66,27 @@ nvme0n3 259:2    0     5G  0 disk                               disk VB1234-5678
 nvme0n4 259:3    0     5G  0 disk                               disk VB1234-56789
 nvme0n5 259:4    0     5G  0 disk                               disk VB1234-56789
 ```
+
 * SN is duplicated all nvme disk.
 
 ### source code
-```
+
+```sh
 $ git clone https://github.com/poseidonos/poseidonos.git
 ```
+
 * get dependency required to build
-```
+
+```sh
 cd script
 $ sudo ./pkgdep.sh
 $ sudo apt install libssl-dev
 $ sudo apt install libaio1
 ```
+
 ### build 
-```
+
+```text
 cd lib; sudo ./build_ibof_lib.sh all
 ...
 Install the project...
@@ -89,10 +100,12 @@ Install the project...
 
 cd script: sudo ./build_ibofos.sh
 ```
+
 * fix it to run POS
 
 ### run POS
-```
+
+```text
 $ sudo ./start_poseidonos.sh 
 [sudo] good의 암호: 
 0000:00:0e.0 (80ee 4e56): Already using the nvme driver
@@ -109,22 +122,26 @@ Execute poseidonos
 Wait poseidonos
 ./start_poseidonos.sh: line 38:  6663 세그멘테이션 오류 nohup ${ROOT_DIR}/bin/$binary_name &>> ${ROOT_DIR}/script/${logfile}
 ```
+
 * script/pos.log
-```
+
+```text
 [06 Aug 14:24:46.792][5105][critical] Cpu allowed list is wrongly set   string_descripted_cpu_set_generator.cpp:185
 [06 Aug 14:24:46.792][5128][warning] Spdk Event Not Initialized   event_framework_api.cpp:92
 [06 Aug 14:24:46.792][5142][error] Fail to finalize IOAT   accel_engine_api.cpp:327
 ```
 
 * tring_descripted_cpu_set_generator.cpp:185
-```
+
+```text
   if (isOverlaped)
     {
         printf("==>>[%d][%d]\n", isExceed, isOverlaped)
 ```
 
 * restart
-```
+
+```sh
 $ sudo ./start_poseidonos.sh 
 0000:00:0e.0 (80ee 4e56): uio_pci_generic -> nvme
 Setting maximum # of Huge Page Size is 2/3 of Total Memory Size
@@ -144,13 +161,15 @@ root     10390  1160 99 14:47 pts/2    00:03:42 /home/good/code/poseidonos/scrip
 ```
 
 #### create uram0
-```
+
+```sh
 /poseidonos/lib/spdk-20.10/scripts$ sudo ./rpc.py bdev_malloc_create -b uram0 8192 512
 uram0
 ```
 
 #### device list
-```
+
+```sh
 $ ./cli device list
 
 ==> pos.log 
@@ -168,7 +187,8 @@ $ ./cli device list
 ```
 
 #### Device duplicateion  check 
-```
+
+```c++
 bool DeviceManager::_CheckDuplication(UblockSharedPtr dev)
 {
     DevName name(dev->GetName());
@@ -180,7 +200,7 @@ bool DeviceManager::_CheckDuplication(UblockSharedPtr dev)
 }
 ```
 
-```
+```c++
 int AbrManager::GetAbrList(std::vector<ArrayBootRecord>& abrList)
 {
     int result = mbrManager->LoadMbr();
@@ -195,7 +215,8 @@ int AbrManager::GetAbrList(std::vector<ArrayBootRecord>& abrList)
 ```
 
 #### rebuild 
-```
+
+```sh
 cd script/
 $ sudo ./build_ibofos.sh
 $ kill -9 `ps -ef | grep pos| awk '{print $1}'`
@@ -204,7 +225,8 @@ $ sudo ./start_poseidonos.sh
 
 
 #### check POS
-```
+
+```sh
 poseidonos/bin$ ./cli system info
 Request to Poseidon OS
     xrId        :  aaec8c20-f683-11eb-bf67-080027f58a4e
@@ -220,7 +242,8 @@ Response from Poseidon OS
 ```
 
 #### device scan list
-```
+
+```json
 good@good-VirtualBox:~/code/poseidonos/bin$ ./cli device scan
 good@good-VirtualBox:~/code/poseidonos/bin$ ./cli device list
 Response from Poseidon OS
@@ -282,7 +305,7 @@ Response from Poseidon OS
 
 #### Create new POS array
 
-```
+```sh
 # ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4
 
 Response from Poseidon OS
@@ -315,8 +338,10 @@ Response from Poseidon OS
         }
 
 ```
+
 * /var/log/pos/pos.log 
-```
+
+```log
 ===>
 [06 Aug 22:35:18.534][2530][info] the device added to the Array as DATA   array_device_list.cpp:145
 [06 Aug 22:35:18.534][2507][error] SSD capacity is not valid. Valid capacity is from 20GB to 32TB   array_device_manager.cpp:548
@@ -328,7 +353,8 @@ static const uint64_t MINIMUM_SSD_SIZE_BYTE = 2UL * SIZE_GB;
 ```
 
 #### create pos array 
-````
+
+```json
 $ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
 
 Request to Poseidon OS
@@ -353,11 +379,11 @@ Response from Poseidon OS
     Description  :  Success
     Problem      :  
     Solution     :
-````
+```
 
 #### factory reset 
 
-````
+````sh
 $ sudo  ./factory_reset.py 
 
  ================ POS FACTORY RESET ================ 
@@ -395,7 +421,7 @@ The rule file removed
 
 #### Create Array
 
-```
+```json
 $ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
 
 
@@ -424,7 +450,7 @@ Response from Poseidon OS
 
 #### get POS array 
 
-```
+```json
 $ sudo ./cli array info --name POSArray
 
 
@@ -458,7 +484,8 @@ Response from Poseidon OS
 ```
 
 #### delete pos array 
-````
+
+````json
 $ sudo ./cli array delete   --name POSArray
 
 Request to Poseidon OS
@@ -479,7 +506,8 @@ Response from Poseidon OS
 
 #### create pos array
 
-```$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray1 --raidtype RAID5
+```json
+$ sudo  ./cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray1 --raidtype RAID5
 
 
 Request to Poseidon OS
@@ -548,7 +576,8 @@ Response from Poseidon OS
 ```
 
 #### resize uram 
-````
+
+````log
 good@good-VirtualBox:~/code/poseidonos/lib/spdk-20.10/scripts$ sudo ./rpc.py bdev_malloc_create -b uram0 4096  512uram0
 
 namespace pos { class MetaRegionContent {
@@ -574,7 +603,7 @@ namespace pos { class MetaRegionContent {
 
 #### mount array
 
-````
+````log
 $ sudo ./cli array mount  --name POSArray
 FATA[0015] EOF                              
 
@@ -589,7 +618,8 @@ FATA[0015] EOF
 ````
 
 #### syslog 
-````
+
+````log
 Aug 10 08:53:02 good-VirtualBox systemd-udevd[6423]: inotify_add_watch(9, /dev/nvme0n3, 10) failed: No such file or directory
 Aug 10 08:53:02 good-VirtualBox systemd-udevd[6320]: inotify_add_watch(9, /dev/nvme0n1, 10) failed: No such file or directory
 Aug 10 08:53:02 good-VirtualBox systemd-udevd[6424]: inotify_add_watch(9, /dev/nvme0n4, 10) failed: No such file or directory
@@ -611,14 +641,16 @@ Aug 10 08:53:02 good-VirtualBox poseidonos: ]
 ````
 
 ##### segment fault
-```
+
+```log
 Aug 10 08:55:51 good-VirtualBox kernel: [39065.494384] poseidonos[6678]: segfault at 0 ip 0000000000812375 sp 00007f18813843a0 error 4 in poseidonos[400000+81b000]
 Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 54 55 53 48 83 ec 40 48 8b 6f 28 48 8b 56 08 64 48 8b 04 25 28 00 00 00 48 89 44 24 38 31 c0 48 8d 5c 24 10 <48> 8b 45 00 48 89 df 4c 8b 60 20 48 8d 43 10 48 89 44 24 10 48 8b
 ```
 
 #### build with 4core
 * change this file /etc/pos/default_pos.conf
-```
+
+```json
 {
    "journal": {
         "enable": true,
@@ -666,21 +698,25 @@ Aug 10 08:55:51 good-VirtualBox kernel: [39065.494395] Code: 00 00 00 00 00 41 5
    }
 }
 ```
+
 * default pos.conf file
-`/home/good/code/poseidonos/src/master_context/default_configuration.h `
-```` 
+
+```c++
+/home/good/code/poseidonos/src/master_context/default_configuration.h `
+
     const string CONFIGURATION_PATH = "/etc/pos/";
     const string CONFIGURATION_NAME = "pos.conf";
     const string DEFAULT_CONFIGURATION_NAME = "default_pos.conf";
 };
 
 } // namespace po
-````
+```
 
 
 
 #### run.sh
-````
+
+```sh
 sudo  /home/good/code/poseidonos/script/factory_reset.py
 sudo  /home/good/code/poseidonos/script/start_poseidonos.sh
 sudo  /home/good/code/poseidonos/lib/spdk-20.10/scripts/rpc.py bdev_malloc_create -b uram0 4096 512
@@ -691,10 +727,29 @@ sudo  /home/good/code/poseidonos/bin/cli array delete --name POSArray
 sudo  /home/good/code/poseidonos/bin/cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
 sudo  /home/good/code/poseidonos/bin/cli array info  --name POSArray 
 sudo  /home/good/code/poseidonos/bin/cli array mount --name POSArray 
-````
+```
 
 #### Create volume
+
+* Lpn mismatch deteced fix it
+
+```c++
+bool
+MDPage::CheckLpnMismatch(MetaLpnType srcLpn)
+{
+    if (ctrlInfo->metaLpn != srcLpn)
+    {
+        MFS_TRACE_ERROR((int)POS_EVENT_ID::MFS_INVALID_PARAMETER,
+            "Lpn mismatch detected: target_lpn={}, saved lpn={}",srcLpn, ctrlInfo->metaLpn);
+        
+        //return false;
+    }
+    return true;
+}
 ```
+
+
+```json
 $ sudo  ./cli volume create --name vol1 --size 1024000000 --maxiops 0 --maxbw 0 --array POSArray 
 
 
@@ -718,7 +773,8 @@ Response from Poseidon OS
 ```
 
 ### mount volume
-```
+
+```json
 $ sudo  ./cli volume mount --name vol1 --array POSArray
 
 
@@ -759,3 +815,46 @@ Response from Poseidon OS
     Problem      :  
     Solution     :  
 ```
+
+### Test sh
+
+```sh 
+#!/bin/bash
+VOLUME_SIZE=2147483648
+#VirtualMachine?
+IS_VM=false
+SPDK_PATH=../lib/spdk-20.10
+BIN_PATH=../bin
+SCRIPT_PATH=../script
+
+sudo  $SCRIPT_PATH/factory_reset.py
+sudo  $SCRIPT_PATH/start_poseidonos.sh
+sudo  $SPDK_PATH/scripts/rpc.py bdev_malloc_create -b uram0 2048 512
+sudo  $BIN_PATH/cli system info 
+sudo  $BIN_PATH/cli device scan
+sudo  $BIN_PATH/cli device list 
+sudo  $BIN_PATH/cli array delete --name POSArray 
+sudo  $BIN_PATH/cli array create -b uram0 -d unvme-ns-0,unvme-ns-1,unvme-ns-2,unvme-ns-3,unvme-ns-4  --name POSArray --raidtype RAID5
+sudo  $BIN_PATH/cli array info  --name POSArray 
+sudo  $BIN_PATH/cli array mount --name POSArray 
+
+sudo  $SPDK_PATH/scripts/rpc.py nvmf_create_subsystem nqn.2019-04.ibof:subsystem1 -a -s IBOF00000000000001 -d IBOF_VOLUME_EXTENSION -m 256
+sudo  $SPDK_PATH/scripts/rpc.py nvmf_create_transport -t tcp -b 64 -n 4096
+sudo  $SPDK_PATH/scripts/rpc.py nvmf_subsystem_add_listener nqn.2019-04.ibof:subsystem1 -t tcp -a 192.168.56.12 -s 1158
+sudo  $SPDK_PATH/scripts/rpc.py nvmf_get_subsystems
+
+sudo  $BIN_PATH/cli volume create --name vol1 --size $VOLUME_SIZE --maxiops 0 --maxbw 0 --array POSArray
+sudo  $BIN_PATH/cli volume list --array POSArray
+sudo  $BIN_PATH/cli volume mount --name vol1 --array POSArray
+sudo  $BIN_PATH/cli volume list --array POSArray
+sudo  $BIN_PATH/cli volume unmount --name vol1 --array POSArray
+sudo  $BIN_PATH/cli volume delete --name vol1 --array POSArray
+
+
+sudo  $SPDK_PATH/scripts/rpc.py nvmf_get_subsystems
+
+sudo  $BIN_PATH/cli array unmount --name POSArray
+sudo  $BIN_PATH/cli array delete --name POSArray
+sudo  $BIN_PATH/cli system exit
+
+````
