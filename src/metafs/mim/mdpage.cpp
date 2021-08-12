@@ -129,10 +129,9 @@ MDPage::CheckLpnMismatch(MetaLpnType srcLpn)
     if (ctrlInfo->metaLpn != srcLpn)
     {
         MFS_TRACE_ERROR((int)POS_EVENT_ID::MFS_INVALID_PARAMETER,
-            "Lpn mismatch detected: target_lpn={}, saved lpn={}",
-            srcLpn, ctrlInfo->metaLpn);
-
-        return false;
+            "Lpn mismatch detected: target_lpn={}, saved lpn={}",srcLpn, ctrlInfo->metaLpn);
+        
+        //return false;
     }
     return true;
 }

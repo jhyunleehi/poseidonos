@@ -3186,3 +3186,1010 @@ name: uram0
 [2021-08-12 21:41:47.769020] nvmf_target.cpp:  77:CreatePosBdev: *ERROR*: bdev bdev_0_POSArray does not exist
 [12 Aug 21:41:47.784][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:133
 poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:09:00.272140] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:09:00.272569] [ DPDK EAL parameters: [2021-08-12 23:09:00.272613] ibof_nvmf [2021-08-12 23:09:00.272621] --no-shconf [2021-08-12 23:09:00.272639] -c 01 [2021-08-12 23:09:00.272647] --log-level=lib.eal:6 [2021-08-12 23:09:00.272653] --log-level=lib.cryptodev:5 [2021-08-12 23:09:00.272659] --log-level=user1:6 [2021-08-12 23:09:00.272664] --iova-mode=pa [2021-08-12 23:09:00.272670] --base-virtaddr=0x200000000000 [2021-08-12 23:09:00.272676] --match-allocations [2021-08-12 23:09:00.272682] --file-prefix=spdk_pid3664 [2021-08-12 23:09:00.272688] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:09:00.388083] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:09:00.490797] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:09:00.491100] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+===============================
+Event Worker Socket: 0
+===============================
+{"command":"GETIBOFOSINFO","rid":"d7e673b4-fb76-11eb-a3a0-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"d8dd474f-fb76-11eb-828f-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"d8e69cfa-fb76-11eb-9da5-080027f58a4e"}
+[12 Aug 23:09:02.885][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:09:02.885][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:09:02.885][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:09:02.885][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:09:02.885][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:09:04.177][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.180][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.183][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.187][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.191][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.191][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:09:04.195][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.200][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.203][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.207][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.211][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.211][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:09:04.211][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:09:04.211][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"d9b7e23b-fb76-11eb-a6d4-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"d9bfda67-fb76-11eb-8e0a-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:09:04.324][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.337][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.346][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.351][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.355][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.355][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:09:04.359][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.363][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.368][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.378][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.398][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:09:04.398][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"d9d82fc6-fb76-11eb-9ad5-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:09:04.461][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:09:04.482][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:09:04.482][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:09:04.482][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:09:04.483][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:09:04.483][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"d9e9f254-fb76-11eb-a951-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"d9efac15-fb76-11eb-a545-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:09:04.628][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:09:04.628][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:09:04.628][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:09:04.628][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20002e400e00]
+===>>>[1]
+==pointer=>>>[0x20012eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20012eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x200195600000]
+===>>>[1]
+==pointer=>>>[0x20012eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20012eb39800]
+===>>>[2048]
+==pointer=>>>[0x200196000000]
+[2021-08-12 23:16:08.297877] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:16:08.298320] [ DPDK EAL parameters: [2021-08-12 23:16:08.298334] ibof_nvmf [2021-08-12 23:16:08.298342] --no-shconf [2021-08-12 23:16:08.298348] -c 01 [2021-08-12 23:16:08.298382] --log-level=lib.eal:6 [2021-08-12 23:16:08.298389] --log-level=lib.cryptodev:5 [2021-08-12 23:16:08.298395] --log-level=user1:6 [2021-08-12 23:16:08.298401] --iova-mode=pa [2021-08-12 23:16:08.298408] --base-virtaddr=0x200000000000 [2021-08-12 23:16:08.298416] --match-allocations [2021-08-12 23:16:08.298423] --file-prefix=spdk_pid5433 [2021-08-12 23:16:08.298429] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:16:08.415769] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:16:08.525527] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:16:08.525852] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started===============================
+
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor
+CPU ID: 1	Usage: UserIO
+CPU ID: 2	Usage: Scheduler
+CPU ID: 3	Usage: Event
+===============================
+Event Worker Socket: 0
+===============================
+{"command":"GETIBOFOSINFO","rid":"d70a4678-fb77-11eb-9c6a-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"d80182fe-fb77-11eb-bf95-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"d80a21c1-fb77-11eb-b3bf-080027f58a4e"}
+[12 Aug 23:16:10.941][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:16:10.941][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:16:10.941][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:16:10.941][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:16:10.941][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:16:10.965][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:10.968][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:10.978][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:10.981][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:10.991][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:10.992][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:16:11.000][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.011][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.016][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.023][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.027][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.027][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:16:11.027][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:16:11.027][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"d822b42e-fb77-11eb-bb2d-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"d82aaf41-fb77-11eb-a4b5-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:16:11.147][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.154][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.157][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.161][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.165][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.165][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:16:11.180][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.187][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.196][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.206][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.209][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:16:11.209][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"d83dfbca-fb77-11eb-848e-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:16:11.276][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:16:11.300][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:16:11.301][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:16:11.302][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:16:11.302][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:16:11.302][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"d84c6f6b-fb77-11eb-8b18-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"d85692bf-fb77-11eb-94dc-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:16:11.434][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:16:11.434][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:16:11.434][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:16:11.434][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20002e400e00]
+===>>>[1]
+==pointer=>>>[0x20012eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20012eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x200195600000]
+===>>>[1]
+==pointer=>>>[0x20012eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20012eb39800]
+===>>>[2048]
+==pointer=>>>[0x200196000000]
+[2021-08-12 23:25:11.263085] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:25:11.263381] [ DPDK EAL parameters: [2021-08-12 23:25:11.263401] ibof_nvmf [2021-08-12 23:25:11.263410] --no-shconf [2021-08-12 23:25:11.263417] -c 01 [2021-08-12 23:25:11.263424] --log-level=lib.eal:6 [2021-08-12 23:25:11.263431] --log-level=lib.cryptodev:5 [2021-08-12 23:25:11.263438] --log-level=user1:6 [2021-08-12 23:25:11.263444] --iova-mode=pa [2021-08-12 23:25:11.263451] --base-virtaddr=0x200000000000 [2021-08-12 23:25:11.263458] --match-allocations [2021-08-12 23:25:11.263465] --file-prefix=spdk_pid7163 [2021-08-12 23:25:11.263477] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:25:11.382124] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:25:11.494442] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:25:11.494798] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"1aaafad1-fb79-11eb-8a9b-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"1baf6f3d-fb79-11eb-9392-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"1bb8056d-fb79-11eb-b93a-080027f58a4e"}
+[12 Aug 23:25:16.616][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:25:16.616][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:25:16.616][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:25:16.616][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:25:16.616][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:25:16.625][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.628][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.632][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.635][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.638][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.638][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:25:16.642][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.648][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.652][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.656][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.661][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.661][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:25:16.661][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:25:16.661][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"1d618923-fb79-11eb-99b1-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"1d6af265-fb79-11eb-9b65-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:25:16.841][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.866][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.885][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.890][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.900][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.900][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:25:16.907][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.918][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.923][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.942][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.952][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:25:16.952][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"1d8a08e4-fb79-11eb-843c-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:25:17.030][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:25:17.041][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:25:17.041][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:25:17.042][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:25:17.043][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:25:17.043][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"1d96acbc-fb79-11eb-96b8-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"1da2bed5-fb79-11eb-8fa4-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:25:17.210][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:25:17.210][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:25:17.210][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:25:17.210][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x20013eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20013eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2001a5600000]
+===>>>[1]
+==pointer=>>>[0x20013eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20013eb39800]
+===>>>[2048]
+==pointer=>>>[0x2001a6000000]
+[12 Aug 23:25:19.793][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:25:20.750][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:25:20.753][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+{"command":"ARRAYINFO","rid":"6ef82096-fb79-11eb-9c6a-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"CREATEVOLUME","rid":"9d3ab941-fb79-11eb-9ff0-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-12 23:28:51.300693] bdev_pos.c: 756:create_pos_disk: *ERROR*: pos_buf buffer: spdk_dma_zmalloc() failed
+[2021-08-12 23:28:51.301082] nvmf_target.cpp:  77:CreatePosBdev: *ERROR*: bdev bdev_0_POSArray does not exist
+[12 Aug 23:28:51.306][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:32:10.567082] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:32:10.567409] [ DPDK EAL parameters: [2021-08-12 23:32:10.567421] ibof_nvmf [2021-08-12 23:32:10.567429] --no-shconf [2021-08-12 23:32:10.567436] -c 01 [2021-08-12 23:32:10.567443] --log-level=lib.eal:6 [2021-08-12 23:32:10.567453] --log-level=lib.cryptodev:5 [2021-08-12 23:32:10.567460] --log-level=user1:6 [2021-08-12 23:32:10.567466] --iova-mode=pa [2021-08-12 23:32:10.567473] --base-virtaddr=0x200000000000 [2021-08-12 23:32:10.567480] --match-allocations [2021-08-12 23:32:10.567486] --file-prefix=spdk_pid8945 [2021-08-12 23:32:10.567493] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:32:10.689650] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:32:10.796957] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:32:10.797290] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"1499dd3c-fb7a-11eb-aff0-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"15937848-fb7a-11eb-b7ec-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"159f0a79-fb7a-11eb-a5c4-080027f58a4e"}
+[12 Aug 23:32:15.898][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:32:15.898][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:32:15.898][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:32:15.898][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:32:15.898][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:32:15.907][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.911][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.915][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.930][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.934][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.935][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:32:15.945][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.948][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.952][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.955][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.958][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:15.958][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:32:15.958][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:32:15.958][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"1749cb81-fb7a-11eb-afea-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"175719c0-fb7a-11eb-b3d9-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:32:16.129][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.135][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.148][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.153][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.160][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.160][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:32:16.163][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.168][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.171][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.174][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.178][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:32:16.178][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"176abf89-fb7a-11eb-b497-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:32:16.269][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:32:16.292][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:32:16.297][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:32:16.302][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:32:16.318][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:32:16.318][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"17822b94-fb7a-11eb-8615-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"1791156a-fb7a-11eb-813f-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:32:16.510][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:32:16.510][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:32:16.510][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:32:16.510][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x20013eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20013eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2001a5600000]
+===>>>[1]
+==pointer=>>>[0x20013eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20013eb39800]
+===>>>[2048]
+==pointer=>>>[0x2001a6000000]
+[12 Aug 23:32:18.989][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:32:20.042][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:32:20.044][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+{"command":"CREATEVOLUME","rid":"1aa1a3ee-fb7a-11eb-8bb3-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-12 23:32:21.688683] bdev_pos.c: 756:create_pos_disk: *ERROR*: pos_buf buffer: spdk_dma_zmalloc() failed
+[2021-08-12 23:32:21.688808] nvmf_target.cpp:  77:CreatePosBdev: *ERROR*: bdev bdev_0_POSArray does not exist
+[12 Aug 23:32:21.694][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:37:37.585406] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:37:37.585693] [ DPDK EAL parameters: [2021-08-12 23:37:37.585707] ibof_nvmf [2021-08-12 23:37:37.585714] --no-shconf [2021-08-12 23:37:37.585720] -c 01 [2021-08-12 23:37:37.585726] --log-level=lib.eal:6 [2021-08-12 23:37:37.585732] --log-level=lib.cryptodev:5 [2021-08-12 23:37:37.585738] --log-level=user1:6 [2021-08-12 23:37:37.585744] --iova-mode=pa [2021-08-12 23:37:37.585750] --base-virtaddr=0x200000000000 [2021-08-12 23:37:37.585755] --match-allocations [2021-08-12 23:37:37.585761] --file-prefix=spdk_pid10677 [2021-08-12 23:37:37.585767] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:37:37.701978] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:37:37.807155] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:37:37.807481] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"d782e4a0-fb7a-11eb-b401-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"d883a8d3-fb7a-11eb-976b-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"d88d4219-fb7a-11eb-96d6-080027f58a4e"}
+[12 Aug 23:37:40.306][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:37:40.306][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:37:40.306][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:37:40.306][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:37:40.306][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:37:40.375][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.395][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.402][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.426][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.430][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.430][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:37:40.433][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.436][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.444][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.456][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.460][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.460][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:37:40.460][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:37:40.460][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"d8b470d1-fb7a-11eb-8c84-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"d8be5696-fb7a-11eb-95a1-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:37:40.611][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.616][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.623][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.626][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.662][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.663][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:37:40.667][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.684][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.690][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.699][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.703][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:37:40.703][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"d8d72280-fb7a-11eb-bc2b-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:37:40.759][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:37:40.801][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:37:40.802][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:37:40.802][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:37:40.803][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:37:40.803][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"d8e7b5b3-fb7a-11eb-bc77-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"d8f2f2ab-fb7a-11eb-9525-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:37:40.991][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:37:40.991][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:37:40.991][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:37:40.991][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x20013eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20013eb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2001a5600000]
+===>>>[1]
+==pointer=>>>[0x20013eb3ba00]
+===>>>[2]
+==pointer=>>>[0x20013eb39800]
+===>>>[2048]
+==pointer=>>>[0x2001a6000000]
+[12 Aug 23:37:44.201][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:37:45.168][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:37:45.171][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+[12 Aug 23:37:45.821][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+{"command":"CREATEVOLUME","rid":"dc86c5bc-fb7a-11eb-a5b6-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":1073741824}}
+[2021-08-12 23:37:46.953800] bdev_pos.c: 756:create_pos_disk: *ERROR*: pos_buf buffer: spdk_dma_zmalloc() failed
+[2021-08-12 23:37:46.954166] nvmf_target.cpp:  77:CreatePosBdev: *ERROR*: bdev bdev_0_POSArray does not exist
+[12 Aug 23:37:46.963][4303][error] Lpn mismatch detected: target_lpn=23146, saved lpn=23082   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:44:23.716234] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:44:23.716700] [ DPDK EAL parameters: [2021-08-12 23:44:23.716718] ibof_nvmf [2021-08-12 23:44:23.716726] --no-shconf [2021-08-12 23:44:23.716739] -c 01 [2021-08-12 23:44:23.716745] --log-level=lib.eal:6 [2021-08-12 23:44:23.716757] --log-level=lib.cryptodev:5 [2021-08-12 23:44:23.716763] --log-level=user1:6 [2021-08-12 23:44:23.716769] --iova-mode=pa [2021-08-12 23:44:23.716780] --base-virtaddr=0x200000000000 [2021-08-12 23:44:23.716786] --match-allocations [2021-08-12 23:44:23.716798] --file-prefix=spdk_pid12469 [2021-08-12 23:44:23.716805] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:44:23.839198] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:44:23.943094] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:44:23.943414] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"c996931f-fb7b-11eb-980b-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"cb57fdb0-fb7b-11eb-aabb-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"cb65f83c-fb7b-11eb-92de-080027f58a4e"}
+[12 Aug 23:44:30.341][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:44:30.341][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:44:30.341][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:44:30.341][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:44:30.341][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:44:30.360][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.363][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.366][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.369][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.373][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.373][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:44:30.380][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.383][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.387][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.390][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.394][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.394][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:44:30.394][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:44:30.394][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"cd08f02c-fb7b-11eb-a2bf-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"cd10c3ba-fb7b-11eb-bd14-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:44:30.516][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.519][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.524][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.528][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.537][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.538][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:44:30.559][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.569][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.590][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.598][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.612][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:44:30.618][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"cd2d3ec2-fb7b-11eb-bc3d-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:44:30.729][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:44:30.750][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:44:30.751][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:44:30.751][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:44:30.766][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:44:30.766][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"cd489589-fb7b-11eb-b4c1-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"cd5693cf-fb7b-11eb-85ef-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:44:30.974][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:44:30.979][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:44:30.979][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:44:30.979][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:44:31.585][5140][error] Fail to allocate memory   free_buffer_pool.cpp:62
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x20023eb3ee00]
+===>>>[2]
+==pointer=>>>[0x20023eb3cc00]
+===>>>[2048]
+==pointer=>>>[(nil)]
+poseidonos: /home/good/code/poseidonos/src/metafs/common/meta_region_content.h:53: static void* pos::MetaRegionContent::operator new(size_t, pos::MetaLpnType): Assertion `buf != nullptr' failed.
+[2021-08-12 23:45:49.356653] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:45:49.356926] [ DPDK EAL parameters: [2021-08-12 23:45:49.356944] ibof_nvmf [2021-08-12 23:45:49.356952] --no-shconf [2021-08-12 23:45:49.356959] -c 01 [2021-08-12 23:45:49.356976] --log-level=lib.eal:6 [2021-08-12 23:45:49.356983] --log-level=lib.cryptodev:5 [2021-08-12 23:45:49.356993] --log-level=user1:6 [2021-08-12 23:45:49.357001] --iova-mode=pa [2021-08-12 23:45:49.357010] --base-virtaddr=0x200000000000 [2021-08-12 23:45:49.357017] --match-allocations [2021-08-12 23:45:49.357023] --file-prefix=spdk_pid14146 [2021-08-12 23:45:49.357029] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:45:49.472194] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:45:49.575964] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:45:49.576312] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"fca89436-fb7b-11eb-bb78-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"fd45a1d8-fb7b-11eb-8851-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"fd50207a-fb7b-11eb-9679-080027f58a4e"}
+[12 Aug 23:45:51.462][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:45:51.462][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:45:51.462][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:45:51.462][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:45:51.462][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:45:51.516][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.519][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.524][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.531][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.547][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.548][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:45:51.558][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.563][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.574][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.577][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.588][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.588][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:45:51.588][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:45:51.588][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"fd7409a2-fb7b-11eb-b567-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"fd8159b2-fb7b-11eb-b43e-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:45:51.798][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.807][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.811][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.817][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.831][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.831][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:45:51.838][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.846][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.868][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.878][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.889][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:45:51.895][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"fda0af4f-fb7b-11eb-a6c1-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:45:51.997][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:45:52.031][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:45:52.031][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:45:52.032][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:45:52.032][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:45:52.032][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"fdb07a9a-fb7b-11eb-9d9b-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"fdbed216-fb7b-11eb-b5e7-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:45:52.196][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:45:52.197][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:45:52.197][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:45:52.197][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x2000beb3ee00]
+===>>>[2]
+==pointer=>>>[0x2000beb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2000f2200000]
+===>>>[1]
+==pointer=>>>[0x2000beb3ba00]
+===>>>[2]
+==pointer=>>>[0x2000beb39800]
+===>>>[2048]
+==pointer=>>>[0x2000f2c00000]
+{"command":"CREATEVOLUME","rid":"00cee021-fb7c-11eb-9de1-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":1073741824}}
+[2021-08-12 23:45:57.327139] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_0_POSArray io error status=0
+[12 Aug 23:45:57.332][4303][error] Lpn mismatch detected: target_lpn=23146, saved lpn=23082   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:48:37.036146] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:48:37.036394] [ DPDK EAL parameters: [2021-08-12 23:48:37.036410] ibof_nvmf [2021-08-12 23:48:37.036417] --no-shconf [2021-08-12 23:48:37.036423] -c 01 [2021-08-12 23:48:37.036429] --log-level=lib.eal:6 [2021-08-12 23:48:37.036435] --log-level=lib.cryptodev:5 [2021-08-12 23:48:37.036440] --log-level=user1:6 [2021-08-12 23:48:37.036446] --iova-mode=pa [2021-08-12 23:48:37.036452] --base-virtaddr=0x200000000000 [2021-08-12 23:48:37.036457] --match-allocations [2021-08-12 23:48:37.036463] --file-prefix=spdk_pid15910 [2021-08-12 23:48:37.036484] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:48:37.154090] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:48:37.258086] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:48:37.258525] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"6093e5e9-fb7c-11eb-89bb-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"6127374e-fb7c-11eb-815b-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"61335435-fb7c-11eb-83ee-080027f58a4e"}
+[12 Aug 23:48:39.040][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:48:39.040][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:48:39.040][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:48:39.040][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:48:39.040][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:48:39.065][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.069][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.072][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.076][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.079][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.079][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:48:39.083][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.095][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.099][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.103][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.106][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.106][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:48:39.106][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:48:39.106][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"614733ed-fb7c-11eb-8a38-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"6152c189-fb7c-11eb-8ffd-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:48:39.249][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.268][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.278][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.282][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.290][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.291][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:48:39.303][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.311][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.316][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.325][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.334][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:48:39.334][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"616ac815-fb7c-11eb-af02-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:48:39.418][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:48:39.454][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:48:39.465][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:48:39.467][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:48:39.468][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:48:39.468][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"617ef6bd-fb7c-11eb-81f1-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"618db788-fb7c-11eb-a80a-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:48:39.667][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:48:39.667][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:48:39.667][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:48:39.667][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x2000beb3ee00]
+===>>>[2]
+==pointer=>>>[0x2000beb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2000f2200000]
+===>>>[1]
+==pointer=>>>[0x2000beb3ba00]
+===>>>[2]
+==pointer=>>>[0x2000beb39800]
+===>>>[2048]
+==pointer=>>>[0x2000f2c00000]
+{"command":"CREATEVOLUME","rid":"649bfec4-fb7c-11eb-adbf-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-12 23:48:44.823173] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_0_POSArray io error status=0
+[12 Aug 23:48:44.876][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-12 23:57:34.436079] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-12 23:57:34.436335] [ DPDK EAL parameters: [2021-08-12 23:57:34.436346] ibof_nvmf [2021-08-12 23:57:34.436353] --no-shconf [2021-08-12 23:57:34.436359] -c 01 [2021-08-12 23:57:34.436365] --log-level=lib.eal:6 [2021-08-12 23:57:34.436370] --log-level=lib.cryptodev:5 [2021-08-12 23:57:34.436376] --log-level=user1:6 [2021-08-12 23:57:34.436381] --iova-mode=pa [2021-08-12 23:57:34.436387] --base-virtaddr=0x200000000000 [2021-08-12 23:57:34.436393] --match-allocations [2021-08-12 23:57:34.436398] --file-prefix=spdk_pid17747 [2021-08-12 23:57:34.436404] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-12 23:57:34.554261] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-12 23:57:34.655279] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-12 23:57:34.655568] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"a0e8bdf4-fb7d-11eb-b97a-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"a17cfa59-fb7d-11eb-a805-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"a18dcd9a-fb7d-11eb-843d-080027f58a4e"}
+[12 Aug 23:57:39.132][5510][warning] Initialization complete.   nvme.cpp:510
+[12 Aug 23:57:39.132][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:57:39.132][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:57:39.132][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[12 Aug 23:57:39.132][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[12 Aug 23:57:39.140][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.143][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.146][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.149][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.152][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.152][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:57:39.159][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.162][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.165][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.168][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.173][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.173][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:57:39.173][2313][error] Failed to get abr list   array_manager.cpp:272
+[12 Aug 23:57:39.173][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"a33112f0-fb7d-11eb-8f4a-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"a33867d9-fb7d-11eb-8022-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:57:39.299][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.304][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.307][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.311][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.316][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.316][2313][warning] mbr data not found   mbr_manager.cpp:328
+[12 Aug 23:57:39.321][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.324][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.328][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.332][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.343][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[12 Aug 23:57:39.343][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"a3494def-fb7d-11eb-abfe-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[12 Aug 23:57:39.406][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[12 Aug 23:57:39.420][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[12 Aug 23:57:39.421][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[12 Aug 23:57:39.421][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[12 Aug 23:57:39.422][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[12 Aug 23:57:39.422][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"a352c09c-fb7d-11eb-be1b-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"a35f0ee5-fb7d-11eb-9208-080027f58a4e","param":{"name":"POSArray"}}
+[12 Aug 23:57:39.571][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:57:39.571][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:57:39.571][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[12 Aug 23:57:39.571][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x2000beb3ee00]
+===>>>[2]
+==pointer=>>>[0x2000beb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2000f2200000]
+===>>>[1]
+==pointer=>>>[0x2000beb3ba00]
+===>>>[2]
+==pointer=>>>[0x2000beb39800]
+===>>>[2048]
+==pointer=>>>[0x2000f2c00000]
+{"command":"CREATEVOLUME","rid":"a65a06ac-fb7d-11eb-9eb7-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-12 23:57:44.631774] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_0_POSArray io error status=0
+[12 Aug 23:57:44.637][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:133
+poseidonos: mpio.cpp:244: bool pos::Mpio::CheckDataIntegrity(): Assertion `false' failed.
+[2021-08-13 00:02:45.960963] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-13 00:02:45.961235] [ DPDK EAL parameters: [2021-08-13 00:02:45.961253] ibof_nvmf [2021-08-13 00:02:45.961261] --no-shconf [2021-08-13 00:02:45.961278] -c 01 [2021-08-13 00:02:45.961285] --log-level=lib.eal:6 [2021-08-13 00:02:45.961299] --log-level=lib.cryptodev:5 [2021-08-13 00:02:45.961306] --log-level=user1:6 [2021-08-13 00:02:45.961320] --iova-mode=pa [2021-08-13 00:02:45.961326] --base-virtaddr=0x200000000000 [2021-08-13 00:02:45.961339] --match-allocations [2021-08-13 00:02:45.961345] --file-prefix=spdk_pid23452 [2021-08-13 00:02:45.961358] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-13 00:02:46.076390] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-13 00:02:46.184199] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-13 00:02:46.184567] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"5a91fbe4-fb7e-11eb-bd2d-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"5b28b036-fb7e-11eb-bb5f-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"5b325886-fb7e-11eb-8880-080027f58a4e"}
+[13 Aug 00:02:50.652][5510][warning] Initialization complete.   nvme.cpp:510
+[13 Aug 00:02:50.653][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:02:50.653][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:02:50.653][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:02:50.653][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[13 Aug 00:02:50.661][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.664][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.667][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.671][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.675][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.675][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:02:50.679][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.683][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.687][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.692][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.698][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.698][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:02:50.698][2313][error] Failed to get abr list   array_manager.cpp:272
+[13 Aug 00:02:50.698][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"5cdd5fab-fb7e-11eb-bfe0-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"5ce8ac8b-fb7e-11eb-9193-080027f58a4e","param":{"name":"POSArray"}}
+[13 Aug 00:02:50.837][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.849][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.872][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.880][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.884][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.885][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:02:50.896][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.909][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.924][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.939][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.949][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:02:50.949][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"5d05a78a-fb7e-11eb-9da9-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[13 Aug 00:02:51.022][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[13 Aug 00:02:51.039][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[13 Aug 00:02:51.045][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[13 Aug 00:02:51.061][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[13 Aug 00:02:51.074][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[13 Aug 00:02:51.083][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"5d19e440-fb7e-11eb-aa35-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"5d25728d-fb7e-11eb-976d-080027f58a4e","param":{"name":"POSArray"}}
+[13 Aug 00:02:51.219][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:02:51.219][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:02:51.219][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:02:51.219][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x2000beb3ee00]
+===>>>[2]
+==pointer=>>>[0x2000beb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2000f2200000]
+===>>>[1]
+==pointer=>>>[0x2000beb3ba00]
+===>>>[2]
+==pointer=>>>[0x2000beb39800]
+===>>>[2048]
+==pointer=>>>[0x2000f2c00000]
+{"command":"CREATEVOLUME","rid":"605a9672-fb7e-11eb-afc3-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-13 00:02:56.641892] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_0_POSArray io error status=0
+[13 Aug 00:02:56.679][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:132
+{"command":"LISTVOLUME","rid":"60686384-fb7e-11eb-afc3-080027f58a4e"}
+{"command":"LISTVOLUME","rid":"606f39ff-fb7e-11eb-bad6-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"MOUNTVOLUME","rid":"607a5cb1-fb7e-11eb-a8eb-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+{"command":"LISTVOLUME","rid":"608990fd-fb7e-11eb-b2b1-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"ARRAYINFO","rid":"9264da1d-fb7e-11eb-a258-080027f58a4e","param":{"name":"POSARRAY"}}
+{"command":"ARRAYINFO","rid":"c89cc433-fb7e-11eb-bd35-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"ARRAYINFO","rid":"cfda2875-fb7e-11eb-b367-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"LISTVOLUME","rid":"034a1f09-fb7f-11eb-b21b-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"LISTVOLUME","rid":"c19756f7-fb7f-11eb-8bc3-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"UNMOUNTVOLUME","rid":"cc305ad1-fb7f-11eb-aad8-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+{"command":"DELETEVOLUME","rid":"d1096d7b-fb7f-11eb-bfd9-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+[13 Aug 00:13:15.209][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:132
+{"command":"UNMOUNTARRAY","rid":"ed90a64c-fb7f-11eb-b940-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"DELETEARRAY","rid":"23f7333a-fb80-11eb-a59a-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"EXITIBOFOS","rid":"2dc853e9-fb80-11eb-9b89-080027f58a4e"}
+Exit Call
+Exit Call
+Exit Call 1 
+[2021-08-13 00:15:52.907963] thread.c: 197:spdk_thread_lib_fini: *ERROR*: io_device pos_bdev not unregistered
+SPDK app finalized
+[2021-08-13 00:16:39.447712] Starting SPDK v20.10 git sha1 c07a024 / DPDK 20.08.0 initialization...
+[2021-08-13 00:16:39.447879] [ DPDK EAL parameters: [2021-08-13 00:16:39.447892] ibof_nvmf [2021-08-13 00:16:39.447899] --no-shconf [2021-08-13 00:16:39.447906] -c 01 [2021-08-13 00:16:39.447912] --log-level=lib.eal:6 [2021-08-13 00:16:39.447918] --log-level=lib.cryptodev:5 [2021-08-13 00:16:39.447924] --log-level=user1:6 [2021-08-13 00:16:39.447930] --iova-mode=pa [2021-08-13 00:16:39.447936] --base-virtaddr=0x200000000000 [2021-08-13 00:16:39.447942] --match-allocations [2021-08-13 00:16:39.447948] --file-prefix=spdk_pid25646 [2021-08-13 00:16:39.447954] ]
+EAL: No legacy callbacks, legacy socket not created
+[2021-08-13 00:16:39.577178] app.c: 474:spdk_app_start: *NOTICE*: Total cores available: 1
+[2021-08-13 00:16:39.683171] reactor.c: 722:reactor_run: *NOTICE*: Reactor started on core 0
+[2021-08-13 00:16:39.683532] accel_engine.c: 696:spdk_accel_engine_initialize: *NOTICE*: Accel engine initialized to use software engine.
+poseidonos started
+===============================
+1 Sockets in Current NUMA
+===============================
+Socket ID: 0, 4CPUs
+===============================
+CPU ID: 0	Usage: Reactor General
+CPU ID: 1	Usage: UserIO QOS
+CPU ID: 2	Usage: Scheduler MetaScheduler
+CPU ID: 3	Usage: Event MetaIO
+===============================
+Event Worker Socket: 0
+===============================
+CPU ID: 0       Usage: AIR
+{"command":"GETIBOFOSINFO","rid":"4b646015-fb80-11eb-8de8-080027f58a4e"}
+{"command":"GETIBOFOSINFO","rid":"4bf93192-fb80-11eb-9717-080027f58a4e"}
+{"command":"SCANDEVICE","rid":"4c045ece-fb80-11eb-93fd-080027f58a4e"}
+[13 Aug 00:16:41.494][5510][warning] Initialization complete.   nvme.cpp:510
+[13 Aug 00:16:41.494][5517][warning] DEVICE DUPLICATED Name:unvme-ns-1, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:16:41.494][5517][warning] DEVICE DUPLICATED Name:unvme-ns-2, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:16:41.494][5517][warning] DEVICE DUPLICATED Name:unvme-ns-3, SN: VB1234-56789           device_manager.cpp:257
+[13 Aug 00:16:41.494][5517][warning] DEVICE DUPLICATED Name:unvme-ns-4, SN: VB1234-56789           device_manager.cpp:257
+name: uram0
+[13 Aug 00:16:41.545][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.553][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.568][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.573][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.586][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.587][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:16:41.601][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.604][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.607][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.610][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.615][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.615][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:16:41.615][2313][error] Failed to get abr list   array_manager.cpp:272
+[13 Aug 00:16:41.615][2313][error] array loading failed : no array found   scan_device_command.cpp:81
+{"command":"LISTDEVICE","rid":"4c223022-fb80-11eb-9bea-080027f58a4e"}
+{"command":"DELETEARRAY","rid":"4c30c188-fb80-11eb-9d20-080027f58a4e","param":{"name":"POSArray"}}
+[13 Aug 00:16:41.780][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.783][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.789][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.792][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.798][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.798][2313][warning] mbr data not found   mbr_manager.cpp:328
+[13 Aug 00:16:41.801][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.808][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.812][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.820][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.823][2311][warning] mbr parity check fail, mbr is reset   mbr_manager.cpp:396
+[13 Aug 00:16:41.823][2313][warning] mbr data not found   mbr_manager.cpp:328
+{"command":"CREATEARRAY","rid":"4c407d97-fb80-11eb-ba25-080027f58a4e","param":{"name":"POSArray","raidtype":"RAID5","buffer":[{"deviceName":"uram0"}],"data":[{"deviceName":"unvme-ns-0"},{"deviceName":"unvme-ns-1"},{"deviceName":"unvme-ns-2"},{"deviceName":"unvme-ns-3"},{"deviceName":"unvme-ns-4"}]}}
+==> ArrayDeviceManager::Import(DeviceSet<string> nameSet)  [uram0]
+[13 Aug 00:16:41.873][2590][error] ERROR Import()....    array_device_manager.cpp:70
+[13 Aug 00:16:41.890][2519][error] Trim Failed on unvme-ns-0   stripe_partition.cpp:378
+[13 Aug 00:16:41.891][2519][error] Trim Failed on unvme-ns-1   stripe_partition.cpp:378
+[13 Aug 00:16:41.892][2519][error] Trim Failed on unvme-ns-2   stripe_partition.cpp:378
+[13 Aug 00:16:41.893][2519][error] Trim Failed on unvme-ns-3   stripe_partition.cpp:378
+[13 Aug 00:16:41.893][2519][error] Trim Failed on some devices   stripe_partition.cpp:405
+{"command":"ARRAYINFO","rid":"4c505762-fb80-11eb-bf2a-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"MOUNTARRAY","rid":"4c5bf13c-fb80-11eb-98ee-080027f58a4e","param":{"name":"POSArray"}}
+[13 Aug 00:16:42.065][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:16:42.065][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:16:42.065][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+[13 Aug 00:16:42.065][2532][warning] failed to add the device unvme-ns-0 to the Array, Duplicated   array_device_list.cpp:138
+===>>>[1]
+==pointer=>>>[0x20003e600e00]
+===>>>[1]
+==pointer=>>>[0x2000beb3ee00]
+===>>>[2]
+==pointer=>>>[0x2000beb3cc00]
+===>>>[2048]
+==pointer=>>>[0x2000f2200000]
+===>>>[1]
+==pointer=>>>[0x2000beb3ba00]
+===>>>[2]
+==pointer=>>>[0x2000beb39800]
+===>>>[2048]
+==pointer=>>>[0x2000f2c00000]
+{"command":"CREATEVOLUME","rid":"4f5fc7c8-fb80-11eb-b029-080027f58a4e","param":{"name":"vol1","array":"POSArray","size":2147483648}}
+[2021-08-13 00:16:47.156281] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_0_POSArray io error status=0
+[13 Aug 00:16:47.161][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:132
+{"command":"LISTVOLUME","rid":"4f730629-fb80-11eb-b877-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"MOUNTVOLUME","rid":"4f7dc14b-fb80-11eb-ae18-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+{"command":"LISTVOLUME","rid":"4f880dc3-fb80-11eb-9b77-080027f58a4e","param":{"array":"POSArray"}}
+{"command":"UNMOUNTVOLUME","rid":"4f948d6b-fb80-11eb-9662-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+{"command":"DELETEVOLUME","rid":"4fa00d1f-fb80-11eb-b031-080027f58a4e","param":{"name":"vol1","array":"POSArray"}}
+[13 Aug 00:16:47.662][4303][error] Lpn mismatch detected: target_lpn=23666, saved lpn=23602   mdpage.cpp:132
+{"command":"UNMOUNTARRAY","rid":"4ffecc22-fb80-11eb-b726-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"DELETEARRAY","rid":"51b57475-fb80-11eb-b52c-080027f58a4e","param":{"name":"POSArray"}}
+{"command":"EXITIBOFOS","rid":"51c1a623-fb80-11eb-8372-080027f58a4e"}
+Exit Call
+Exit Call
+Exit Call 1 
+[2021-08-13 00:16:54.513804] thread.c: 197:spdk_thread_lib_fini: *ERROR*: io_device pos_bdev not unregistered
+SPDK app finalized
