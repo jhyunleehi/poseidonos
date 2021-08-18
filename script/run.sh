@@ -32,6 +32,8 @@ sudo  $BIN_PATH/cli volume list --array POSArray
 
 sudo  $SPDK_PATH/scripts/rpc.py nvmf_get_subsystems
 
+sudo  $SPDK_PATH/scripts/rpc_http_proxy.py localhost 8000 good good &
+
 #sudo  $BIN_PATH/cli array unmount --name POSArray
 #sudo  $BIN_PATH/cli array delete --name POSArray
 #sudo  $BIN_PATH/cli system exit
