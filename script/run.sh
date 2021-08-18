@@ -26,12 +26,12 @@ sudo  $BIN_PATH/cli volume create --name vol1 --size $VOLUME_SIZE --maxiops 0 --
 sudo  $BIN_PATH/cli volume list --array POSArray
 sudo  $BIN_PATH/cli volume mount --name vol1 --array POSArray
 sudo  $BIN_PATH/cli volume list --array POSArray
-sudo  $BIN_PATH/cli volume unmount --name vol1 --array POSArray
-sudo  $BIN_PATH/cli volume delete --name vol1 --array POSArray
+#sudo  $BIN_PATH/cli volume unmount --name vol1 --array POSArray
+#sudo  $BIN_PATH/cli volume delete --name vol1 --array POSArray
 
 
 sudo  $SPDK_PATH/scripts/rpc.py nvmf_get_subsystems
 
-sudo  $BIN_PATH/cli array unmount --name POSArray
-sudo  $BIN_PATH/cli array delete --name POSArray
-sudo  $BIN_PATH/cli system exit
+#sudo  $BIN_PATH/cli array unmount --name POSArray
+#sudo  $BIN_PATH/cli array delete --name POSArray
+#sudo  $BIN_PATH/cli system exit
