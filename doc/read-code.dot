@@ -1,0 +1,43 @@
+digraph G {
+    RequestHandler	[shape="box"]
+    CreateVolumeCommand [shape="box"]
+    Execute[label="Execute()"]
+    GetVolumeManager [label="GetVolumeManager(arrayname)", shape="box"]
+    create[label="volMgr->Create()"]
+    VolumeCreator[shape="box"]
+    Do [label="Do(name,sie,maxiops,maxbw)"]
+    CheckPrerequisite
+    MetaFsServiceSingleton [shape="box"]
+
+    RequestHandler -> CreateVolumeCommand
+	CreateVolumeCommand -> Execute
+    Execute -> QosManagerSingleton
+    Execute -> VolumeServiceSingleton
+    VolumeServiceSingleton -> GetVolumeManager
+    GetVolumeManager -> create
+    create->VolumeCreator
+    create -> CheckPrerequisite
+    VolumeCreator -> Do
+    namePolicy -> CheckVolumeName
+    volumeList ->GetID
+    Do ->  CheckVolumeName
+    Do -> GetID        
+    Do -> NotifyVolumeCreated
+    Do -> SaveVolumes    
+    volumeList -> Add
+    eventPublisher -> NotifyVolumeCreated
+    VolumeMetaIntf->SaveVolumes
+    
+    MetaFsServiceSingleton-> MetaVolumeManager 
+    MetaFsServiceSingleton->{GetMetaF,CheckFileExist,Write,Close} 
+    SaveVolumes -> GetMetaF
+    SaveVolumes -> CheckFileExist
+    SaveVolumes -> Write
+    SaveVolumes -> Close
+    CheckFileExist -> Create -> Open
+    CheckFileExist -> Open -> Write -> Close
+    Create -> MetaVolumeManager
+
+    
+
+}
