@@ -132,7 +132,7 @@ MDPage::CheckLpnMismatch(MetaLpnType srcLpn)
             "Lpn mismatch detected: target_lpn={}, saved lpn={}",
             srcLpn, ctrlInfo->metaLpn);
 
-        return false;
+        //return false;
     }
     return true;
 }
