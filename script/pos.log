@@ -4450,3 +4450,9 @@ name: uram0
 [2021-08-22 14:34:02.464822] vbdev_gpt.c: 437:gpt_bdev_complete: *ERROR*: Gpt: bdev=bdev_1_POSArray io error status=0
 [22 Aug 14:34:02.478][4303][error] Lpn mismatch detected: target_lpn=23146, saved lpn=23082   mdpage.cpp:133
 {"command":"LISTVOLUME","rid":"db2ac4b5-0878-449a-bc07-989a5727b415","param":{"array":"POSArray"}}
+{"command":"CREATEVOLUME","rid":"55f0d4b2-8475-4539-9e55-3d0e23529b05","param":{"name":"vol2","array":"POSArray","size":1073741824}}
+[22 Aug 18:53:54.207][2022][warning] Volume name is duplicated   volume_creator.cpp:68
+{"command":"MOUNTVOLUME","rid":"c8c53d82-2e41-48c5-ad53-ffc765c2c025","param":{"name":"vol2","array":"POSArray"}}
+{"command":"GETHOSTNQN","rid":"b0f95d00-99b2-475e-ae7a-830296e81167","param":{"name":"vol2","array":"POSArray"}}
+{"command":"RENAMEVOLUME","rid":"74472a78-929a-49b8-a5f3-c1f2ffa9f391","param":{"name":"vol2","newname":"newvol2","array":"POSArray"}}
+[22 Aug 18:54:24.373][4303][error] Lpn mismatch detected: target_lpn=23146, saved lpn=23082   mdpage.cpp:133
