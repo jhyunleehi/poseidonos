@@ -145,7 +145,7 @@ MDPage::CheckFileMismatch(FileDescriptorType fd)
         MFS_TRACE_ERROR((int)POS_EVENT_ID::MFS_INVALID_PARAMETER,
             "FD mismatch detected: target FD={}, saved FD={}, lpn={}",
             fd, ctrlInfo->fd, ctrlInfo->metaLpn);
-        return false;
+        //return false;
     }
     return true;
 }
