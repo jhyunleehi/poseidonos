@@ -2,12 +2,13 @@ digraph G {
     RequestHandler	[shape="box"]
     CreateVolumeCommand [shape="box"]
     Execute[label="Execute()"]
-    GetVolumeManager [label="GetVolumeManager(arrayname)", shape="box"]
+    GetVolumeManager [label="GetVolumeManager\n(arrayname)", shape="box"]
     create[label="volMgr->Create()"]
     VolumeCreator[shape="box"]
-    Do [label="Do(name,sie,maxiops,maxbw)"]
+    Do [label="Do\n(name,sie,maxiops,maxbw)"]
     CheckPrerequisite
     MetaFsServiceSingleton [shape="box"]
+    VolumeMetaIntf [shape="box"]
 
     RequestHandler -> CreateVolumeCommand
 	CreateVolumeCommand -> Execute
